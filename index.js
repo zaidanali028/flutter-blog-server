@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 }
 
 connect()
-let port=5000||process.env.PORT
+let port=process.env.PORT||5000
 
 const userRoutes=require("./routes/user")
 app.use("/user",(userRoutes))
