@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 // const dbUrI = "mongodb://localhost:27017/flutter-blog";
-const dbUrI=process.env.DB_URL
+const dbUrI = process.env.DB_URL;
 
 //body Parser
 app.use(express.json());
@@ -21,6 +21,7 @@ function requireHTTPS(req, res, next) {
   next();
 }
 app.use(requireHTTPS);
+//yh
 
 connect = () => {
   try {
@@ -48,5 +49,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Server running on port "+port+"----...");
+  console.log("Server running on port " + port + "----...");
 });
