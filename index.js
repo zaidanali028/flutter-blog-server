@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const dbUrI = "mongodb://localhost:27017/flutter-blog";
-// const dbUrI=process.env.DB_URL
+// const dbUrI = "mongodb://localhost:27017/flutter-blog";
+const dbUrI=process.env.DB_URL
 
 //body Parser
 app.use(express.json());
